@@ -1,0 +1,234 @@
+/* ========= About Us Page Styles ========= */
+.about-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Title */
+.about-h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b6b, #fbb03b);
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Section 1 - Intro */
+.about-container1 {
+  background: linear-gradient(135deg, #ffffff, #f7f9fc);
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+.about-container1 p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* Section 2 - Image + Text */
+.about-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.about-container2 img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+.about-container2 img:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.about-container-3 {
+  flex: 1;
+  animation: fadeLeft 1s ease-in-out;
+}
+
+.about-container-3 h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #ff6b6b;
+}
+
+.about-container-3 p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Section 3 - Values */
+.about-container-4 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.about-container-4 img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+.about-container-4 img:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.about-container-5 {
+  flex: 1;
+  animation: fadeRight 1s ease-in-out;
+}
+
+.about-container-5 h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fbb03b;
+}
+
+.about-container-6 h5 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+  position: relative;
+}
+
+.about-container-6 h5::before {
+  content: "✨";
+  margin-right: 8px;
+  color: #ff6b6b;
+}
+
+.about-container-6 p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 12px 18px;
+  border-left: 4px solid #ff6b6b;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.about-container-6 p:hover {
+  transform: translateX(5px);
+}
+
+/* Value List Styling */
+.about-values-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.about-values-list p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-left: 5px solid #ff6b6b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Icon effect before text */
+.about-values-list p::before {
+  content: "✔";
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Hover effect */
+.about-values-list p:hover {
+  transform: translateX(8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  background: linear-gradient(135deg, #fff, #fef5f5);
+}
+
+
+/* ========= Animations ========= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ========= Responsive ========= */
+
+/* Tablet */
+@media (min-width: 600px) {
+  .about-h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .about-container2,
+  .about-container-4 {
+    flex-wrap: nowrap;
+  }
+
+  .about-container-3 h2,
+  .about-container-5 h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .about-container {
+    padding: 80px;
+  }
+
+  .about-h1 {
+    font-size: 3.6rem;
+  }
+}

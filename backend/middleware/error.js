@@ -1,0 +1,29 @@
+const HandleError = require("../utils/handleError");
+
+const errorHandleMiddleware = (err, req, res, next) => {
+    err.statusCode = err.statusCode || 500;
+    err.message = err.message || "Internal Server Error";
+
+    //Cast error
+    if(err.name==='CastError'){
+        const message=`This is Invalid resource ${err.path}`;
+        err=new HandleError(message,404)
+    }
+
+    //Duplicate key error
+    if(err.code===11000){
+        const message=`This ${Object.keys(err.keyValue)} already Registered. please Login to continue`;
+        err=new HandleError(message,400);
+    }
+
+
+    res.status(err.statusCode).json({
+        success: false,
+        message:err.message
+        // message: err.stack
+    });
+};
+
+
+
+module.exports=errorHandleMiddleware;

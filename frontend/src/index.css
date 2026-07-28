@@ -1,0 +1,28 @@
+:root { 
+    
+     --primary-main: #6A0DAD;   /* Strong Royal Purple */
+  --primary-dark: #4B0082;   /* Deep Indigo */
+  --primary-light: #9B30FF;  /* Electric Purple */
+
+  --bg-primary: #1A1A2E;     /* Dark Navy Black */
+  --bg-secondary: #16213E;   /* Midnight Blue */
+
+  --text-primary: #F8F9FA;   /* Clean White */
+  --text-secondary: #D1D1E9; /* Soft Cool Gray */
+  --text-light: #FFFFFF;     /* Pure White */
+
+  --border-color: #9400D3;   /* Strong Violet Border */
+    
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2); 
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.15); 
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* --primary-main: #6C5B7B; --primary-dark: #4E4A59; --primary-light: #F8B5B1; --bg-primary: #2E2E3C; --bg-secondary: #3B3B4F; --text-primary: #EAE7E0; --text-secondary: #B9A7A0; --text-light: #FFFFFF; --border-color: #5C4A6F; change color */
