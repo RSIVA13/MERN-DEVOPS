@@ -34,7 +34,7 @@ const Home = () => {
     <ImageSlider/>
    <div className="home-container">
 
-    <h2 className='home-heading'>Trending Products</h2>
+    <h2 className='home-heading'>Trending Now</h2>
     <div className="home-product-container">
       {products.map((product,index)=>(
         <Product product={product} key={index}/>
